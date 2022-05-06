@@ -3,7 +3,10 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 
 class Dog extends Component {
-  state = {isBackgroundColor :false};
+  state = {
+    isBlackImageSelect :false,
+    isLogoImageSelect :false
+  };
    render()
    {
       return(
@@ -11,24 +14,24 @@ class Dog extends Component {
           <View style={{marginBottom:10}}>
               <TouchableOpacity 
                 style={{  borderRadius:10, alignItems:'center',
-                      backgroundColor:this.state.isBackgroundColor ? 'white' : 'black'}}
+                      backgroundColor:this.state.isBlackImageSelect ? 'white' : 'black'}}
                 onPress={() => {
-                  this.setState({isBackgroundColor: !this.state.isBackgroundColor});} 
+                  this.setState({isBlackImageSelect: !this.state.isBlackImageSelect});} 
                 }>
                 <Image
                   source={require('./assets/image/black.png')}
-                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBackgroundColor ?'white': 'black'}}/>
+                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBlackImageSelect ?'white': 'black'}}/>
               </TouchableOpacity> 
 
               <TouchableOpacity 
                 style={{  borderRadius:10, alignItems:'center',
-                      backgroundColor:this.state.isBackgroundColor ? 'black' : 'white'}}
+                      backgroundColor:this.state.isLogoImageSelect ? 'black' : 'white'}}
                 onPress={() => {
-                  this.setState({isBackgroundColor: !this.state.isBackgroundColor});} 
+                  this.setState({isLogoImageSelect: !this.state.isLogoImageSelect});} 
                 }>
                 <Image
                   source={require('./assets/image/logo.png')}
-                  style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isBackgroundColor ? 'black' : 'white' }}/>
+                  style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isLogoImageSelect ? 'black' : 'white' }}/>
               </TouchableOpacity>   
           </View>
         </View>
