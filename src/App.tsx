@@ -13,19 +13,17 @@ class Dog extends Component {
         <View>
           <View style={{marginBottom:10}}>
               <TouchableOpacity 
-                style={{  borderRadius:10, alignItems:'center',
-                      backgroundColor:this.state.isBlackImageSelect ? 'white' : 'black'}}
+                style={{  borderRadius:10, alignItems:'center'}}
                 onPress={() => {
                   this.setState({isBlackImageSelect: !this.state.isBlackImageSelect});} 
                 }>
                 <Image
                   source={require('./assets/image/black.png')}
-                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBlackImageSelect ?'white': 'black'}}/>
+                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBlackImageSelect ?'black': 'white'}}/>
               </TouchableOpacity> 
 
               <TouchableOpacity 
-                style={{  borderRadius:10, alignItems:'center',
-                      backgroundColor:this.state.isLogoImageSelect ? 'black' : 'white'}}
+                style={{  borderRadius:10, alignItems:'center'}}
                 onPress={() => {
                   this.setState({isLogoImageSelect: !this.state.isLogoImageSelect});} 
                 }>
