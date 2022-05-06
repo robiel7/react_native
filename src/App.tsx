@@ -8,26 +8,29 @@ class Dog extends Component {
    {
       return(
         <View>
-         <View style={{marginBottom:10}}>
-         <TouchableOpacity 
-         style={{ padding:10, borderRadius:10, alignItems:'center', borderWidth:1, borderColor:'black',
-              backgroundColor:this.state.isBackgroundColor ? 'black' : 'white'}}
-            onPress={() => {
-              this.setState({isBackgroundColor: !this.state.isBackgroundColor});} 
-            }
-          >
-             <Text style={{color: this.state.isBackgroundColor ? 'white' : 'black'}}> 
-             {this.state.isBackgroundColor ? 'black' : 'white'}  </Text>
-           </TouchableOpacity>   
-         </View>
-        <Image
-          source={require('./assets/image/black.png')}
-          style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBackgroundColor ?'white': 'black'}}/>
-          
-        <Image
-          source={require('./assets/image/logo.png')}
-          style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isBackgroundColor ? 'black' : 'white' }}/>
-       
+          <View style={{marginBottom:10}}>
+              <TouchableOpacity 
+                style={{  borderRadius:10, alignItems:'center',
+                      backgroundColor:this.state.isBackgroundColor ? 'white' : 'black'}}
+                onPress={() => {
+                  this.setState({isBackgroundColor: !this.state.isBackgroundColor});} 
+                }>
+                <Image
+                  source={require('./assets/image/black.png')}
+                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBackgroundColor ?'white': 'black'}}/>
+              </TouchableOpacity> 
+
+              <TouchableOpacity 
+                style={{  borderRadius:10, alignItems:'center',
+                      backgroundColor:this.state.isBackgroundColor ? 'black' : 'white'}}
+                onPress={() => {
+                  this.setState({isBackgroundColor: !this.state.isBackgroundColor});} 
+                }>
+                <Image
+                  source={require('./assets/image/logo.png')}
+                  style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isBackgroundColor ? 'black' : 'white' }}/>
+              </TouchableOpacity>   
+          </View>
         </View>
         
       );
