@@ -22,11 +22,11 @@ class Dog extends Component {
          </View>
         <Image
           source={require('./assets/image/black.png')}
-          style={{ width: 300, height: 300, backgroundColor: this.state.isBackgroundColor ?'white': 'black'}}/>
+          style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBackgroundColor ?'white': 'black'}}/>
           
         <Image
           source={require('./assets/image/logo.png')}
-          style={{ width: 300, height: 300, backgroundColor: this.state.isBackgroundColor ? 'black' : 'white' }}/>
+          style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isBackgroundColor ? 'black' : 'white' }}/>
        
         </View>
         
@@ -46,7 +46,7 @@ export default class App extends Component {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
-            marginTop: 80,
+            marginTop: 50,
             marginBottom: 10,
           }}> 
           <Text style={{fontSize:30,fontWeight:'bold',color:'#008080', padding:10}}>
