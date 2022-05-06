@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
-export default class App extends React.Component {
+export default class App extends Component {
   render (){
     return (
      <ScrollView>
