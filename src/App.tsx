@@ -1,43 +1,7 @@
 import React,{Component} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
-
-class Dog extends Component {
-  state = {
-    isBlackImageSelect :false,
-    isLogoImageSelect :false
-  };
-   render()
-   {
-      return(
-        <View>
-          <View style={{marginBottom:10}}>
-              <TouchableOpacity 
-                style={{  borderRadius:10, alignItems:'center'}}
-                onPress={() => {
-                  this.setState({isBlackImageSelect: !this.state.isBlackImageSelect});} 
-                }>
-                <Image
-                  source={require('./assets/image/black.png')}
-                  style={{ width: 300, height: 300,borderRadius:20, backgroundColor: this.state.isBlackImageSelect ?'black': 'white'}}/>
-              </TouchableOpacity> 
-
-              <TouchableOpacity 
-                style={{  borderRadius:10, alignItems:'center'}}
-                onPress={() => {
-                  this.setState({isLogoImageSelect: !this.state.isLogoImageSelect});} 
-                }>
-                <Image
-                  source={require('./assets/image/logo.png')}
-                  style={{ width: 300, height: 300, borderRadius:20, backgroundColor: this.state.isLogoImageSelect ? 'black' : 'white' }}/>
-              </TouchableOpacity>   
-          </View>
-        </View>
-        
-      );
-    }
-  }
-
+import Dog from './component/Dog';
 
 export default class App extends Component {
   render (){
@@ -57,7 +21,7 @@ export default class App extends Component {
           MOB1
         </Text>
         <Text style={{fontSize:15,padding:10,fontStyle:'italic'}}>
-          Applications mobiles avec un frameworkhybride 🎉
+          Applicagtions mobiles avec un frameworkhybride 🎉
         </Text>
           </View>
 
